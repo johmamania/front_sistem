@@ -1,0 +1,166 @@
+
+
+body {
+  /* background-image: url('.assets/fondo.jpg'); */
+  /* background-color: rgb(17, 35, 199); */
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-wrapper {
+  padding: 4%;;
+  height: auto;
+  margin-top:2% ;
+  position: absolute;
+
+}
+.positronx {
+  text-decoration: none;
+}
+
+.box {
+  box-shadow: 0 2px 5px rgb(24, 24, 26);
+  /* background: linear-gradient(0deg, #094b96, #04032c); */
+  width: 330px; /* Ancho personalizado */
+  height: 360px; /* Alto personalizado */
+  position: relative;
+  top: 4px;
+  opacity: 1;
+  float: left;
+  padding: 0px 10px 10px 10px;
+  border-radius: 10px;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  z-index: 5;
+  border: 1px solid #010041;
+  box-shadow: 0 0 60px 0 #053497;
+
+}
+.login-wrapper .example-form {
+  min-width: 100%;
+  max-width: 300px;
+  width: 100%;
+}
+.login-wrapper .example-full-width,
+.login-wrapper .btn-block {
+  width: 100%;
+}
+
+
+
+
+.login-wrapper mat-card-header mat-card-title {
+  font-size: 65px;
+  text-align: center;
+  margin: 10;
+  margin-left: 10px;
+  color: #e7d2d2;
+  font-weight: bold;
+  text-shadow:
+  -1px -1px 0 #000000,
+   1px -1px 0 #000000,
+  -1px  1px 0 #000000,
+   1px  1px 0 #000000;
+-webkit-text-stroke: 0px rgb(255, 255, 255); /* Contorno de 2 píxeles */
+text-shadow: 0px rgb(255, 0, 0); /* Contorno de 2 píxeles */
+}
+.login-wrapper .mat-card {
+  padding: 40px 70px 50px;
+}
+.login-wrapper .mat-stroked-button {
+  border: 1px solid currentColor;
+  line-height: 54px;
+}
+.login-wrapper .mat-form-field-appearance-legacy .mat-form-field-infix {
+  padding: 0.8375em 0;
+}
+.custom-button {
+  padding: 13px 0;
+  font-size: 20px;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgb(7, 54, 7);
+  font-weight: bolder;
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, border 0.3s;
+
+}
+.custom-button:hover {
+  background-color: rgb(46, 6, 192);
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0);
+  font-size: 21px;
+}
+.custom-button:disabled {
+  background: linear-gradient(179deg, #0b633a, #000000); /* Color gris cuando está deshabilitado */
+  cursor: not-allowed; /* Cambia el cursor a no permitido */
+}
+/* Estilo para el contenedor del progress bar */
+.progress-bar-container {
+  width: 300px; /* Ancho del contenedor */
+}
+/* Estilo para el buffer bar */
+.mat-progress-buffer-custom {
+  height: 20px; /* Altura de la barra de buffer */
+  background-color: rgb(0, 0, 0); /* Color de fondo del buffer */
+}
+.recaptcha-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente el contenido */
+  align-items: top; /* Centra verticalmente el contenido */
+  height: 90px; /* Ajusta la altura según sea necesario */
+}
+
+re-captcha.is-invalid > div {
+  border: 1px solid #dc3b35 !important;
+  border-radius: 0.2rem;
+}
+.foter{
+  text-align: center;
+  font-size: 25px !important;
+  color:rgb(228, 241, 229);
+  font-size: 17px;
+  height:28px;
+}
+
+.footer{
+  position: absolute; /* Make the div fixed */
+  top: 92%; /* Distance from the top of the viewport */
+  left: 50%; /* Center the div horizontally */
+  transform: translate(-50%, 0); /* Adjust horizontal centering */
+  width: 65%; /* Set the width of the div */
+  background-color:rgba(9, 11, 136, 0.788);
+  color:rgb(228, 241, 229);
+  border-radius: 1px solid #101110ad; /* Add a border */
+  padding: 15px; /* Add some padding */
+  z-index: 100; /* Ensure it's above other elements */
+  font-size: large;
+  border: 1px solid #2c40b1;
+  border-radius: 7px;
+  box-shadow: 0 0 60px 0 #0a259e;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

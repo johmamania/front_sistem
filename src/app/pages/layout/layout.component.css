@@ -1,0 +1,140 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.example-sidenav-container {
+  flex: 1;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-toolbar {
+  background: linear-gradient(to bottom, #080242, #111fd8) !important;
+  color: #fff;
+}
+
+.mat-sidenav {
+  background: linear-gradient(to bottom, #0c09ce 20%, #020346 40%);
+  color: #fff;
+}
+
+.mat-sidenav {
+  color: rgb(255, 255, 255);
+}
+
+.menu {
+  width: 100%;
+  display: flex; /* Utilizamos flexbox para alinear contenido */
+  align-items: center; /* Centrar verticalmente el contenido */
+  text-align: left;
+  color: white;
+  background-color: #0091f100;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px 0;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+}
+
+.menu:hover {
+background: #3d63df;
+   color: rgb(255, 255, 255); /* Cambiar color de texto al pasar el cursor */
+}
+
+.menu mat-icon {
+  color: rgb(255, 255, 255); /* Color del icono blanco */
+  margin-right: 10px; /* Añadir espacio entre el icono y el texto */
+}
+
+
+#img{
+  filter:drop-shadow(1px 1px 3px #fff);
+  margin-left: 25x;
+}
+
+.b{
+  color:rgb(245, 192, 192);
+  font-size:15px;
+}
+.user{
+  color: rgb(255, 255, 255);
+  font-size: 15;
+  padding: 20px;
+}
+.center{
+    font-size: 60px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    /*text-shadow:
+      /*-1px -1px 0 #ff0000, */
+       /*1px -1px 0 #ffffff,
+      -1px  1px 0 #ffffff,*/
+       /*1px  1px 0 #ffffff;*/
+    /*-webkit-text-stroke: 1px rgb(255, 255, 255); /* Contorno de 2 píxeles */
+
+}
+.exit{
+  color: blue;
+}
+
+.myButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  color: rgb(255, 255, 255);
+  background-color: #0091f100;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px 0;
+  padding-left: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 12px;
+}
+.myButton:hover {
+  background-color: #0a518f;
+  color: rgb(255, 255, 255);
+}
+
+.myButton mat-icon {
+  color: rgb(248, 245, 245);
+  padding-right: 25px;
+}
+
+.myButton.active {
+  background-color: #0975d3;
+  color: #faf6f6;
+}
+
+
+.divider {
+  border-top: 3px solid rgb(252, 255, 252); /* Grosor de 5px y color azul */
+}
+
+/* Estilo para el h3 */
+.titulo {
+  text-align: center; /* Centrado del texto */
+  color: rgb(245, 247, 239); /* Color azul */
+  margin-bottom: -5px !important;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.subtitulo {
+  text-align: center; /* Centrado del texto */
+  color: rgb(236, 240, 1); 
+  font-weight: bold;
+    margin-bottom: -3px !important;
+}

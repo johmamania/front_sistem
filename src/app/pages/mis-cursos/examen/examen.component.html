@@ -1,0 +1,86 @@
+
+<div class="encabezado-dialogo">
+    <h2 mat-dialog-title>Listado de Preguntas</h2>
+    <span class="example-spacer"></span>
+    
+    <button mat-button class="salir" (click)="salir()">Salir</button>
+  </div>
+  
+  <mat-dialog-content style="max-height: 100vh; min-height: 100px; border-radius: 5px;">
+    <div class="contenedor">
+      <!-- Columna izquierda: Preguntas -->
+      <div class="columna preguntas-scroll">
+        <h3>Preguntas</h3>
+  
+        <div *ngFor="let pregunta of preguntas" class="pregunta-item">
+          <p><strong>{{ pregunta.namePregunta }}</strong></p>
+
+         <div *ngFor="let opciones of pregunta.opciones" >{{opciones.texto}} </div>
+        
+          <mat-radio-group [(ngModel)]="seleccionadas[pregunta.idPregunta]"
+                           (change)="marcarComoRespondida(pregunta.idPregunta)">
+            <mat-radio-button *ngFor="let respuesta of pregunta.respuestas; let i = index"
+                              [value]="respuesta.texto_respuesta"
+                              color="primary"
+                              style="display: block; margin-bottom: 4px;">
+              <strong>{{ obtenerLetra(i) }}.</strong> {{ respuesta.texto_respuesta }}
+            </mat-radio-button>
+          </mat-radio-group>
+        </div>
+
+        <div>
+          <button mat-button class="terminar" (click)="terminarIntento()" > Terminar Intento</button>
+        </div>
+      </div>
+  
+
+      <!-- Columna derecha: Respondidas -->
+      <div class="columna respondidas" style="max-height: 94vh; min-height: 100px; overflow-y: auto; padding-right: 8px;">
+        <div class="timer">
+          <h2>Tiempo restante: {{ formattedTime }}</h2>
+        </div>
+        <h3>
+          Respuestas:
+          <button class="pend" mat-button>pendientes</button>
+          <button class="resp" mat-button>Respondidas</button>
+        </h3>
+      
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px;">
+          <button *ngFor="let pregunta of preguntas"
+                  [ngStyle]="{
+                    'width': '30px',
+                    'height': '30px',
+                    'border': 'none',
+                    'border-radius': '4px',
+                    'background-color': respondidas.includes(pregunta.idPregunta) ? '#1976d2' : '#ccc',
+                    'color': respondidas.includes(pregunta.idPregunta) ? '#fff' : '#000',
+                    'font-weight': 'bold',
+                    'display': 'flex',
+                    'align-items': 'center',
+                    'justify-content': 'center',
+                    'cursor': 'default'
+                  }">
+            {{ pregunta.orden }}
+          </button>
+        </div>
+      <!-- *ngIf="mostrarResultados" -->
+        <div  *ngIf="mostrarResultados" class="resultados" style="margin-top: 16px;">
+          <h4>Puntaje: {{ puntaje }}</h4>
+          <p>Acertadas: {{ acertadas }} &nbsp;  de 100 </p>
+          <p>Fallidas: {{ fallidas }}</p>
+
+
+          <button mat-button class="terminado" (click)="terminado()"> terminar Intento</button>
+        </div>
+      
+      </div>
+      
+      <!-- <div class="columna respondidas">
+        <h3>Respondidas</h3>
+        <div *ngFor="let id of respondidas" class="id-respondida">
+          <span>{{ id }}</span>
+        </div>
+      </div> -->
+    </div>
+  </mat-dialog-content>
+  

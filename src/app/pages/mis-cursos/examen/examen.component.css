@@ -1,0 +1,142 @@
+
+.encabezado-dialogo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+  }
+.salir{
+    background-color: #f30800;
+    color: #ffffff !important;
+    width: 180px;
+}
+.salir:hover{
+    background-color: #660202;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.intentos:hover{
+  background-color: #000257;
+  color: #ffffff !important;
+}
+
+
+.contenedor {
+    display: flex;
+    gap: 14px;
+    margin: 5px;
+    height: 78vh;
+  }
+  
+  .preguntas-scroll {
+    flex: 0 0 65%;
+    overflow-y: auto;
+    max-height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: #fdfdfd;
+  }
+  
+  .pregunta-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .respondidas {
+    flex: 0 0 30%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 7px;
+    background-color: #f0f0f0;
+  }
+  
+  .id-respondida {
+    margin-bottom: 6px;
+    padding: 6px;
+    background-color: #1976d2;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+  }
+  
+
+  .botones-respondidas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .boton-respondida {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    background-color: #9e0404; /* gris por defecto */
+    color: #000;
+    font-weight: bold;
+    cursor: default;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+  }
+  
+  .boton-respondida.respondida {
+    background-color: #2196f3; /* azul cuando respondida */
+    color: #fff;
+  }
+
+  .resp{
+    background-color: #1976d2; /* azul cuando respondida */
+color: #ccc !important;
+  }
+
+  .pend{
+background-color: #48515a;
+color: #ccc !important;
+  }
+
+
+  .resultados {
+    margin-top: 20px;
+    padding: 10px;
+    background: #045686!important ;
+    color: #fdfdfd !important ;
+    border-radius: 8px;
+  }
+
+  .columna.respondidas {
+    max-height: 100;
+    overflow-y: auto;
+    padding-right: 8px;
+  }
+
+
+
+   .terminar{
+    background-color: #1100ff;
+   color: #ccc !important;
+   }
+   .terminar:hover{
+    background-color: #0b037c;
+   color: #ccc !important;
+   }
+
+   .timer {
+    font-size: 2rem;
+    color: #0d47a1;
+    font-weight: bold;
+  }
+  
+   .terminado{
+    background-color: #19861f;
+   color: #fdfdfd !important;
+   }
+   .terminado:hover{
+    background-color: #173a03;
+   color: #ffffff !important;
+   }

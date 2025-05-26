@@ -1,0 +1,49 @@
+
+<body style=" background-image: url('assets/fondo.jpg');"  >
+  <br>
+
+
+  <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+      <br>
+       <mat-card-header>
+        <mat-card-title >SISTEM</mat-card-title>
+      </mat-card-header><br>
+
+
+      <form class="form-group" [formGroup]="_formulario" (ngSubmit)="login()" #loginForm="ngForm">
+        <mat-card-content>
+          <mat-form-field appearance="outline" class="example-full-width" >
+            <input matInput type="text" name="username" formControlName="username"
+                   placeholder="Usuario Chasqui" [(ngModel)]="username"  (input)="convertirAMayusculas()" maxlength="60" />
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="example-full-width">
+            <input matInput type="password" formControlName="password" name="password"
+                   placeholder="Contraseña" [(ngModel)]="password" class="password" required minlength="8"
+                   maxlength="30" />
+          </mat-form-field>
+          <button id="login" type="submit" class="custom-button">Iniciar Sesión
+            <i class="fa fa-sign-in" aria-hidden="true"></i>
+          </button>
+        </mat-card-content>
+      </form>
+
+      <a mat-button id="Chasqui" href="#" >¿Has olvidado la contraseña?</a>
+
+
+    </mat-card>
+
+  </div>
+
+
+  <div class="footer">
+      <footer class="foter">
+            © {{year}} Desarrollado por yhoss.JH_Fullstack Developer Todos los Derechos Reservados
+        </footer>
+  </div>
+
+</body>
+
+
+<mat-card *ngIf="message">{{message}}</mat-card>
+<mat-card *ngIf="error">{{error}}</mat-card>

@@ -1,0 +1,14 @@
+<button mat-raised-button class="green-button">Cursos Matriculados</button>
+
+<div class="checkbox-container">
+  <div *ngFor="let role of cursos">
+    <mat-checkbox [(ngModel)]="role.checked" color="primary">
+      {{ role.name }} 
+    </mat-checkbox>
+  </div>
+</div>
+
+<!-- Botón centrado -->
+<div style="display: flex; justify-content: center; margin-top: 20px;">
+  <button mat-raised-button class="save" (click)="cambiarRoles()">Guardar Cambios</button>
+</div>

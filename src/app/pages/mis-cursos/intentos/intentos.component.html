@@ -1,0 +1,15 @@
+<div class="titulo-intentos">
+    <h3 style="margin-top: 5px;font-size: 25px">Listado de Mis Intentos</h3>
+  </div>
+
+<div class="intentos-container">
+   <h4 *ngIf="intentos">No Tiene Intentos Registrados </h4>
+    <div class="intento-card" *ngFor="let intento of notas">
+      <h3>Intento :{{ intento.intento }}</h3>
+      <p>✅ Correctas: {{ intento.correctas }}</p>
+      <p>❌ Incorrectas: {{ intento.incorrectas }}</p>
+      <p>🏆 Puntaje: {{ intento.correctas }} % de 100%</p>
+      <p>📅 Fecha Intento: {{ intento.fecha_reg| date:'dd/MM/yyyy ' }} </p>
+    </div>
+  </div>
+  

@@ -1,0 +1,39 @@
+<form [formGroup]="courseForm">
+    <mat-dialog-content>
+      <mat-card-header>
+        <mat-card-title class="custom-card-title" style="font-weight: bold;">
+          REGISTRO DE CURSO
+        </mat-card-title>
+      </mat-card-header>
+  
+      <div class="modal-content">
+  
+        <!-- Nombre del Curso -->
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Nombre del curso</mat-label>
+          <input matInput formControlName="name" />
+          <mat-error *ngIf="courseForm.get('name')?.hasError('required') && courseForm.get('name')?.touched">
+            Este campo es obligatorio
+          </mat-error>
+        </mat-form-field>
+  
+        <!-- Descripción del Curso -->
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Descripción</mat-label>
+          <textarea matInput formControlName="description" rows="3"></textarea>
+          <mat-error *ngIf="courseForm.get('description')?.hasError('required') && courseForm.get('description')?.touched">
+            Este campo es obligatorio
+          </mat-error>
+        </mat-form-field>
+  
+      </div>
+    </mat-dialog-content>
+  
+    <mat-dialog-actions align="end">
+      <button mat-button (click)="onCancel()">Cancelar</button>
+      <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="courseForm.invalid">
+        {{ idSave ? 'Actualizar' : 'Guardar' }}
+      </button>
+    </mat-dialog-actions>
+  </form>
+  

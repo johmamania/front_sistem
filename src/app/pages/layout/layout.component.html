@@ -1,0 +1,63 @@
+<router-outlet></router-outlet>
+<div class="example-container">
+<mat-sidenav-container class="example-sidenav-container" >
+
+    <mat-sidenav id="sidenav" #sidenav style="width: 190px" mode=side opened="true" disableClose="true">
+        <br>
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <img id="img" src="assets/ep.png" alt="Descripción de la imagen" width="105" height="110">
+        </div>
+        <br>
+        <mat-divider></mat-divider>
+        <mat-divider class="divider"></mat-divider>
+        <div>  
+        <h3 class="titulo">USUARIO</h3>
+        <!-- <h4 class="subtitulo">administrador</h4> -->
+        <h4 class="subtitulo">{{this.roleuser}}</h4>
+         </div>
+        <mat-divider class="divider"></mat-divider>
+        @if (!menus || menus.length === 0) {
+            <p style="color: white; text-align: center;">No hay menús disponibles</p>
+        }
+        <mat-divider></mat-divider>
+
+        <!-- (click)="sidenav.toggle() -->
+        @for (m of menus; track $index;) {
+        <button id="active" class="myButton"  [routerLinkActive]="['active']" routerLink="{{m.url}}" (click)="selectMenu(m.url)">
+            <mat-icon id="iconn">{{m.icon}}</mat-icon>
+            <span id="name">{{m.name}}</span>
+        </button>
+        }
+
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+
+        <mat-toolbar >
+            <div class="center">
+                <h1>SISTEMA DE PRACTICA DE EVALUACION</h1>
+            </div>
+            <span class="example-spacer"></span>
+
+           <!-- <h4 class="b">BIENVENIDO:&nbsp; </h4> -->
+          <h2 class="user"> {{ this.username }}</h2>
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+              <mat-icon>settings_power</mat-icon>
+            </button>
+
+             <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="sidenav.opened = false" (click)="logout()">
+                  <mat-icon class=" exit">exit_to_app</mat-icon>
+                   <span>Cerrar Sesión</span>
+                </button>
+            </mat-menu>
+
+        </mat-toolbar>
+
+        <router-outlet></router-outlet>
+
+        <app-footer></app-footer>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>
+</div>

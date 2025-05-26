@@ -1,0 +1,70 @@
+.contenedor-principal {
+  margin: 10px;
+  height: auto;
+  min-height: 100vh;
+  background-color: rgba(33, 122, 194, 0.644);
+  padding: 20px;
+}
+
+.titulo-cursos {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.cursos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive */
+  gap: 20px;
+}
+
+.curso-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.titulo-cursos-interno {
+  font-size: 1.2rem;
+  color: #1976d2;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.boton-examen-wrapper {
+  margin-top: auto;
+  text-align: center;
+}
+
+button.acc {
+  background-color: #1976d2;
+  color: white;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+button.acc:hover {
+  background-color: #0f5ea3;
+}
+
+.intentos{
+  background-color: #0a07cf;
+  color: #ffffff !important;
+  width: 240px;
+  border-radius: 8px;
+  margin-left: 5px;
+}
+.intentos:hover{
+  background-color: #03022b;
+  color: #ffffff !important;
+  width: 240px;
+  margin-right: 5px;
+}
