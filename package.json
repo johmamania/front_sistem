@@ -22,7 +22,6 @@
     "@angular/platform-browser-dynamic": "^17.2.0",
     "@angular/router": "^17.2.0",
     "@auth0/angular-jwt": "^5.2.0",
-    "apexcharts": "^4.5.0",
     "jsonwebtoken": "^9.0.2",
     "ng-recaptcha": "^13.2.1",
     "rxjs": "~7.8.0",

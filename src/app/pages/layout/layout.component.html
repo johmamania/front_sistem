@@ -5,7 +5,7 @@
     <mat-sidenav id="sidenav" #sidenav style="width: 190px" mode=side opened="true" disableClose="true">
         <br>
         <div fxLayout="row" fxLayoutAlign="center center">
-            <img id="img" src="assets/ep.png" alt="Descripción de la imagen" width="105" height="110">
+            <img id="img" src="assets/wolf.png" alt="Descripción de la imagen" width="135" height="140">
         </div>
         <br>
         <mat-divider></mat-divider>
@@ -23,7 +23,7 @@
 
         <!-- (click)="sidenav.toggle() -->
         @for (m of menus; track $index;) {
-        <button id="active" class="myButton"  [routerLinkActive]="['active']" routerLink="{{m.url}}" (click)="selectMenu(m.url)">
+        <button id="active" class="myButton"   [routerLinkActive]="['active']" routerLink="{{m.url}}" (click)="selectMenu(m.url)">
             <mat-icon id="iconn">{{m.icon}}</mat-icon>
             <span id="name">{{m.name}}</span>
         </button>
@@ -34,6 +34,10 @@
     <mat-sidenav-content>
 
         <mat-toolbar >
+            <button mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
+                <mat-icon *ngIf="sidenav.opened">menu</mat-icon>
+            </button>
             <div class="center">
                 <h1>SISTEMA DE PRACTICA DE EVALUACION</h1>
             </div>
@@ -46,7 +50,7 @@
             </button>
 
              <mat-menu #menu="matMenu">
-                <button mat-menu-item (click)="sidenav.opened = false" (click)="logout()">
+                <button mat-menu-item (click)="sidenav.opened = false" (click)="logout()" >
                   <mat-icon class=" exit">exit_to_app</mat-icon>
                    <span>Cerrar Sesión</span>
                 </button>
